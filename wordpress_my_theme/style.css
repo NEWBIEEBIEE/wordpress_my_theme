@@ -589,3 +589,7 @@ input[name="s"] {
 #searchsubmit{
     max-width: 30%;
 }
+
+form[role="search"] div{
+    display: flex;
+}
