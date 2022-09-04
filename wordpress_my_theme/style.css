@@ -1,0 +1,564 @@
+@charset "utf-8";
+
+/*
+Theme Name: origin
+Description: オリジナルテンプレート
+Version: 1
+Author Naoyuki Sawabe
+Author URI: http://naraku.website
+*/
+
+/* 追加のcss ここから　*/
+/* フォーム関連 */
+
+/* 検索ボタン */
+
+/* ハンバーガーメニュー */
+
+nav ul li a {
+    color: white;
+}
+
+.pc-nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#hamburger {
+    top:10px;
+    right:10px;
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 25px;/*
+    margin: 0 0 0 auto;*/
+ }
+
+ #hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-50%);
+ }
+
+ #hamburger::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+ }
+ #hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+ }
+
+ .sp-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+ }
+
+ .sp-nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+ }
+ .sp-nav li {
+    margin: 0;
+    padding: 0;
+ }
+ .sp-nav li span {
+    font-size: 15px;
+    color: #fff;
+ }
+ .sp-nav li a, .sp-nav li span {
+    display: block;
+    padding: 20px 0;
+ }
+
+
+
+ /*基準となるli要素*/
+.sp-nav .close {
+    position: relative;
+    padding-left: 20px;
+ }
+ /*バツ印線1*/
+ .sp-nav .close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( 45deg );
+ }
+ /*バツ印線2*/
+ .sp-nav .close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( -45deg );
+ }
+
+ /* js用 */
+ .toggle {
+    transform: translateY( 0 );
+    opacity: 1;
+ }
+
+
+/*レスポンシブ対応　（メニュー）*/
+@media (min-width: 576px) {
+    #hamburger {
+        display: none;
+    }
+}
+
+/* スマホ向け*/
+@media (max-width: 575px) {
+    .pc-nav {
+        display: none;
+    }
+    h1.serif {
+        width : calc(100% - 80px);
+        display:block;
+        position: relative;
+    }
+    #hamburger {
+        
+    }
+    .header-text{
+        height:70px;
+    }
+}
+.clear{
+    clear: both;
+}
+
+
+ /* ハンバーガーメニュー　ここまで */
+
+div input[type="text"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: rgba(251, 249, 252, 0.5);
+	background-image: none;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-radius: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: 1em;
+	padding: 0.4em 0.8em;
+
+}
+
+div input[type="text"]:focus {
+	border: 1px solid rgba(0, 0, 0, 0.32);
+    background: rgba(251, 249, 252, 0.8);
+	box-shadow: none;
+	outline: none;
+}
+
+#searchsubmit {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 18pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 4px 8px;   /* 余白       */
+    background    : #f1ba21;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    border        : 2px solid #f1ba21;    /* 枠の指定 */
+    vertical-align: bottom;
+}
+
+#searchsubmit:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #f1ba21;     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
+  }
+/* 追加のcss　ここまで*/
+
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    font-family: "Sawarabi Mincho";
+}
+
+body {
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.serif{
+    font-family:serif;
+}
+
+.news-column h2 {
+    font-size: 1em;
+}
+
+.cat-name {
+    position: absolute;
+    top: 0;
+    background: #000;
+    text-align: center;
+    padding: 4px;
+    color: #fff;
+    font-size: 1em;
+    font-family: serif;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+li {
+    list-style:none;
+}
+
+.center {
+    text-align: center;
+}
+
+.bread ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.bread li {
+    margin: 0 10px;
+}
+
+.bread li:first-child {
+    margin:0;
+    margin-right: 10px;
+}
+
+header {
+    background: #000;
+    color: #fff;
+}
+
+.header-text {
+    display: flex;
+    position: relative;
+}
+
+.header-text h1 {
+    margin-top:0px;
+    padding-top:10px;
+    padding-left: 90px;
+    margin-right: 1em;
+}
+
+.header-text p {
+    position: relative;
+    top: 20px;
+}
+
+.header-text .search {
+    position: relative;
+    margin: 0px 0px 0px auto;
+    height:30px;
+    width:280px;
+}
+
+.search div{
+    display:block;
+}
+
+.single-img-post {
+    height: 400px;
+}
+
+.img-post-text {
+    position: absolute;
+    font-family: serif;
+    left: 40px;
+    top:50%;
+    color: #fff;
+}
+
+.page header, .single header, .category header, .search header {
+
+}
+
+.text-gray {
+    color: #333;
+}
+
+section {
+    position: relative;
+    padding: 40px;
+}
+
+h2, h3, h4 {
+    position: relative;
+}
+
+.underline::before {
+    content: '';
+    display:block;
+    background:#333;
+    height: 1px;
+    width: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.flex-box {
+    display: -webkit-box;
+    display: box;
+}
+
+.flex-box div {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    width: 100%;
+    margin: 4px;
+}
+
+.flex-box .trim{
+    overflow: hidden;
+    width: auto; /* トリミングしたい枠の幅 */
+    height: 240px; /* トリミングしたい枠の高さ */
+    position: relative;
+}
+
+.flex-box .trim img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width:auto;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+}
+
+.contents-area {
+    padding: 40px 200px;
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+}
+
+
+
+.fixed-box{
+    position: fixed;
+    z-index: 8;
+    left: 10px;
+    top: 10px;
+    height: 300px;
+    width: 90px;
+    background: rgba(255,255,255,0.8);
+}
+
+.fixed-box .hm_btn {
+    left: 6vh;
+}
+
+.b-none {
+    border: none;
+    background: none;
+}
+
+footer{
+    position: relative;
+}
+
+footer section {
+    background: #000;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+@media screen and (max-width: 680px){
+    .header-text h1 {
+        margin-top:0px;
+        padding-top:0px;
+        padding-left: 0px;
+        margin-right: 0em;
+        font-size:large;
+    }
+
+    .header-text .search {
+        position: relative;
+        margin: auto 0px 0px auto;
+        width:170px;
+        height:50px;
+        display: block;
+    }
+
+    /* 追加のcss ここから　*/
+    /* フォーム関連 */
+    div input[type="text"] {
+        display       : inline-block;
+        font-size: 0.5em;
+        padding: 0.3em 0.5em;
+
+    }
+
+    #searchsubmit {
+        display       : inline-block;
+        border-radius : 5%;          /* 角丸       */
+        font-size     : 10pt;        /* 文字サイズ */
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 4px 4px;   /* 余白       */
+        background    : #f1dd21;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 0.5em;         /* 1行の高さ  */
+        transition    : .3s;         /* なめらか変化 */
+        border        : 2px solid #be850a;    /* 枠の指定 */
+    }
+
+    #searchsubmit:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #f1dd21;     /* 背景色     */
+        background    : #ffffff;     /* 文字色     */
+    }
+    /* 追加のcss　ここまで*/
+
+    .menu {
+        display:block;
+        height: 100%;
+        position: relative;
+        padding: 1em;
+    }
+
+    .single-img-post{
+        height: 200px;
+    }
+
+    .img-post-text{
+        top: 100%;
+        color: #333;
+    }
+
+    .home .single-img-post {
+        margin-bottom: 120px;
+        border-bottom: 4px solid #f4f4f4;
+    }
+
+
+    .flex-box div {
+        margin: 0;
+    }
+
+    .cat-name{
+        display:none;
+    }
+
+    .header-text {
+        display: block;
+    }
+
+    .header-text p {
+        top:0;
+        left: 20px;
+        display:none;
+    }
+    .hm_btn {
+        left: 5vw;
+    }
+
+    section {
+        padding: 10px;
+    }
+    .flex-box{
+        display: block;
+    }
+    .flex-box .block{
+        width: 100%;
+    }
+
+    .contents-area {
+        padding: 40px 10px;
+    }
+
+    .sidebar {
+        position:relative;
+    }
+
+    .button-area{
+        display:flex;
+    }
+    .button-area div{
+        width: 30px;
+        
+    }
+}
