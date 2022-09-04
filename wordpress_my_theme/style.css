@@ -9,6 +9,9 @@ Author URI: http://naraku.website
 */
 
 /* 追加のcss ここから　*/
+
+
+
 /* フォーム関連 */
 
 /* 検索ボタン */
@@ -264,7 +267,7 @@ body {
     margin-top: 10px;
 }
 
-a {
+.news-column a {
     color: #000;
     text-decoration: none;
 }
@@ -561,4 +564,16 @@ footer a {
         width: 30px;
         
     }
+}
+.serif > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pc-nav  a {
+    text-decoration: none;
+}
+
+.sp-nav  a {
+    text-decoration: none;
 }
