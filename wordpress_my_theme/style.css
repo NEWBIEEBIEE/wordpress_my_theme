@@ -321,7 +321,7 @@ header {
     position: relative;
     margin: 0px 0px 0px auto;
     height:30px;
-    width:280px;
+    max-width:280px;
 }
 
 .search div{
@@ -576,4 +576,16 @@ footer a {
 
 .sp-nav  a {
     text-decoration: none;
+}
+
+.contents-area .serif a {
+    color:black;
+}
+
+input[name="s"] {
+    min-width: 50%;
+    max-width: 60%;
+}
+#searchsubmit{
+    max-width: 30%;
 }
