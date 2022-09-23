@@ -45,8 +45,19 @@
             <?php
                 $args = array(
                     'posts_per_page' => 1, // 表示件数の指定
-                    'category' => 1 // カテゴリーを指定
+                    //'category' => 0 // カテゴリーを指定
                 );
+                if(is_archive()){
+                    if(is_category()){
+                        $cat = get_the_category();
+                        $cat = $cat[0];
+                        $cat->cat_ID;
+                        $args = array(
+                            'posts_per_page' => 1, // 表示件数の指定
+                            'category' => $cat->cat_ID // カテゴリーを指定
+                        );
+                    }
+                }
                 $posts = get_posts($args);
                 foreach($posts as $post):
                     setup_postdata($post); // 記事データの取得

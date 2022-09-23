@@ -4,8 +4,7 @@
         <div class="flex-box mt-10">
             <?php
             $args = array(
-                'posts_per_page' => 4, // 表示件数の指定
-                'category' => 1 // カテゴリーを指定
+                'posts_per_page' => 5, // 表示件数の指定
             );
             $posts = get_posts($args);
             foreach($posts as $post):
@@ -28,5 +27,48 @@
             wp_reset_postdata();
             ?>
         </div>
+        <div class="flex-box mt-10">
+            <div class="right_aline_button">
+                <a href="" class="btn btn--red btn--radius btn--cubic">続き<i class="fas fa-angle-right fa-position-right" ></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="menuDetailSec">
+        <h3>Categories</h3>
+        <?php
+        $categories = get_categories();
+        foreach ($categories as $category):
+        ?>
+        <ul class="menuList">
+            <li>
+                <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>">
+                <?php
+                    $my_query = new WP_Query(
+                        array(
+                            'cat' => $category->term_id,
+                            'posts_per_page' => 1,
+                        ));
+                    if ($my_query->have_posts()):
+                
+                    while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                    <div>
+                    <?php if(has_post_thumbnail()): ?>
+                        <img src ="<?php echo get_the_post_thumbnail_url(); ?>"/>
+                    <?php else: ?>
+                        <img src="https://placehold.jp/600x400.png"/>
+                    <?php endif; ?>
+                    </div>
+                    <?php endwhile; ?>
+                    <div class="cat_name">
+                        <?php echo $category->name; ?>
+                    </div>
+                    <?php endif; ?>
+                </a>
+            </li>
+            <?php wp_reset_postdata(); ?>
+
+        </ul>
+        <?php endforeach; ?>
     </section>
 <?php get_footer(); ?>
+<?php /* https://9-bb.com/wordpress-get-categories/ */

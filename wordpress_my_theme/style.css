@@ -593,3 +593,336 @@ input[name="s"] {
 form[role="search"] div{
     display: flex;
 }
+
+
+
+/* footer用css */
+
+.map iframe{
+
+    width:360px;
+    height: 320px;
+}
+
+#sample_access{
+    display:flex;
+    justify-content: space-between;
+    width:730px;
+    max-width:90%;
+    margin-top:75px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+
+}
+
+.location{
+    max-width: 300px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.access h2 {
+    font-size:22px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.access p {
+    font-size: 15px;
+    line-height:28px;
+    margin-top:25px;
+}
+
+@media (max-width: 800px){
+    #sample_access{
+        display: block;
+        width:500px;
+        margin-top:45px;
+    }
+    .location{
+        margin-left: 0px;
+    }
+    .map iframe{
+        width:100%;
+        height:auto;
+        margin-top:25px;
+    }
+
+}
+
+
+/* 続きを読むボタン */
+
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+
+
+
+.btn,
+a.btn,
+button.btn {
+    right:10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: absolute;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+a.btn--red.btn--cubic {
+    border-bottom: 5px solid #9f000c;
+    background-color: crimson;
+}
+
+a.btn--red.btn--cubic:hover {
+margin-top: 3px;
+border-bottom: 2px solid #9f000c;
+}
+
+a.btn--radius {
+border-radius: 100vh;
+}
+.fa-position-right {
+position: absolute;
+top: calc(50% - 9px);
+right: 0px;
+}
+
+
+
+
+
+.right_aline_button{
+    position: relative;
+    height:44px;
+    width:100%;
+}
+
+
+/* カテゴリーの一覧index.php */
+
+.menuList {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menuList li div {
+    flex-basis: 10%;
+    text-align: center;
+
+}
+
+.menuList li{
+    position: relative;
+    width: fit-content;
+}
+
+
+.menuList li div img {
+    filter:drop-shadow(1px 2px 3px #dddddd);
+    width: 140px;
+    height: 140px;
+    object-fit: cover; /* この一行を追加するだけ！ */
+    border-radius: 20px;
+}
+
+.menuDetailSec {
+    margin-bottom: 50px;
+}
+
+ul.menuList li a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 680px){
+    .menuList li div {
+        flex-basis: 42%;
+    }
+}
+/*
+.cat_name {
+    display: block;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0 20px 20px 0;
+}*/
+.cat_name {
+    bottom:0px;
+    position: absolute;
+    background: black;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:100%;
+    border-radius: 0 0 30px 30px;
+}
+
+
+
+
+/*個別記事サイト*/
+
+.post-home{
+    display: flex;
+}
+
+.post-title h2 a{
+    text-decoration: none;
+    color: #000;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 40px;
+    justify-content: left;
+}
+.post-thumb{
+    width: 30%;
+}
+
+.post-moji{
+    width: 80%;
+    padding: 5px;
+    height: auto;
+}
+.stripe{ 
+    position: relative;
+    padding: 0.3em;
+    margin: 0;
+  }
+.stripe:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+}
+.categories{
+    justify-content: left;
+    margin:0;
+    padding: 0;
+}
+
+.categories li a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 1em;
+    width: 95%;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #000;
+    transition: 0.3s;
+  }
+  
+  .categories li a::after {
+    /*content: '';*/
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg);
+  }
+  
+  .categories li a:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #bbbbbb;
+  }
+
+/*
+.post-thumb {
+    margin: 0 0 1rem 0;
+    position: relative;
+}
+*/
+
+aside{
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+}
+
+@media (min-width: 600px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        padding: 1rem 2.5rem 2.5rem;
+    }
+
+    main {
+        width: 68%;
+        margin-bottom: 0;
+    }
+
+    aside {
+        width: 26%;
+    }
+
+
+    .post-thumb {
+        margin: 0 3rem 1rem 0;
+        shape-outside: circle();
+        float: left;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 600px){
+    
+    .post-home{
+        display: flex;
+    }
+    .post-thumb{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .post-img {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .post-moji{
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+    }
+    main {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    aside {
+        width: 100%;
+    }
+}
