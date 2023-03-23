@@ -21,7 +21,8 @@ remove_action('wp_head', 'wp_generator');// Wordpressバージョンをソース
 
 function javascript() {
     wp_enqueue_script( 'jquery-js', 'https://code.jquery.com/jquery-3.5.1.min.js', [],'', true );
-    wp_enqueue_script( 'script', get_theme_file_uri('assets/js/scripts.js'), ['jquery-js'],'', true );
+    wp_enqueue_script( 'scripts', get_theme_file_uri('assets/js/scripts.js'), ['jquery-js'],'', true );
+    wp_enqueue_script( 'script', get_theme_file_uri('assets/js/script.js'), ['jquery-js'],'', true );
 }
 
 function style(){
