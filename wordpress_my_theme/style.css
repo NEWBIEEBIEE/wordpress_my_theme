@@ -248,7 +248,7 @@ header {
 }
 
 .search div{
-    display:block;
+    /*display:block;*/
 }
 
 .search form div{
@@ -334,7 +334,7 @@ h2, h3, h4 {
 }
 
 .contents-area {
-    padding: 40px 200px;
+    padding: 40px 5%;
 }
 
 .sidebar{
@@ -377,11 +377,19 @@ footer a {
 }
 
 @media (min-width: 600px){
-    .container{
+    #container{
         display: flex;
         justify-content: space-between;
+        flex-direction:row;
         margin-bottom: 4rem;
         padding: 1rem 2.5rem 2.5rem;
+    }
+
+    .contents-area{
+        width: 60%;
+    }
+    .side-box {
+        width: 20%;
     }
 
     main {

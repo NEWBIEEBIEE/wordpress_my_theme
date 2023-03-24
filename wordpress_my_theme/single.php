@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+    <!-- single.php -->
     <div id="container">
         <section class="contents-area">
             <?php 
