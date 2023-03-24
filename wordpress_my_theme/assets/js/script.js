@@ -31,5 +31,16 @@ $(document).ready(function(){
             console.log("通常メニュー");
             $(".sp-nav").css("display", "none");
             $(".pc-nav").css("display", "block");
+            $('#hum_btn').css("display", "none");
         }
+    });
+
+    $('#hum_btn').on('click', function(){
+        $(this).toggleClass('is-active');
+        $(".sp-nav").toggleClass('is-active');
+    });
+
+    $('.sp-nav a').on('click', function(){
+        $(this).removeClass('is-active');
+        $(".sp-nav").removeClass('is-active');
     });

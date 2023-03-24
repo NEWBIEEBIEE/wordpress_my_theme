@@ -22,6 +22,9 @@
                         'echo' => true
                     )); ?>
                 </nav>
+         
+                <div class="search"><?php get_search_form(); ?></div>
+                <div id="hum_btn"><span></span><span></span><span></span></div>
                 <nav class="sp-nav">
                     <?php wp_nav_menu(array(
                         'depth' => 1,
@@ -29,9 +32,6 @@
                         'echo' => true
                     )); ?>
                 </nav>
-         
-                <div class="search"><?php get_search_form(); ?></div>
-                <div id="hum_btn"><span></span><span></span><span></span></div>
             </div>
 
 
