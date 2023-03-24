@@ -22,6 +22,7 @@
                         'echo' => true
                     )); ?>
                 </nav>
+                <div class="search"><?php get_search_form(); ?></div>
                 <div id="hum_btn"><span></span><span></span><span></span></div>
                 <nav class="sp-nav">
                     <?php wp_nav_menu(array(
@@ -30,7 +31,6 @@
                         'echo' => true
                     )); ?>
                 </nav>
-                <div class="search"><?php get_search_form(); ?></div>
             </div>
 
             <div class="menu_area clearfix">

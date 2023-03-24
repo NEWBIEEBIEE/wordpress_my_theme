@@ -397,9 +397,7 @@ footer a {
         margin-bottom: 0;
     }
 
-    aside {
-        width: 26%;
-    }
+
 
 
     .post-thumb {
@@ -435,9 +433,6 @@ footer a {
         margin-bottom: 0;
     }
 
-    aside {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 680px){
@@ -864,10 +859,48 @@ ul.menuList li a {
 }
 */
 
-aside{
-    display: flex;
-    justify-content: space-between;
-    padding: auto;
+
+@media screen and (max-width: 980px){
+    #container {
+        display:list-item;
+    }
+    .side-box {
+        width: 100%;
+    }
 }
 
 
+/* ページネーション */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+  }
+.nav-links > * + * {
+    margin-left: 12px;
+}
+.page-numbers{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.page-numbers > li{
+    align-items: center;
+    flex-wrap: wrap;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.15s linear;
+}
+.page-numbers > li.isActive {
+    pointer-events: none;
+    background: #111;
+    color: #fff;
+}
+.page-numbers > li:not(.isActive):hover {
+    background: #111;
+    color: #fff;
+}
