@@ -29,6 +29,7 @@
                         'echo' => true
                     )); ?>
                 </nav>
+                <div id="hum_btn"><span></span><span></span><span></span></div>
                 <span class="clear"></span>
                 <div class="search"><?php get_search_form(); ?></div>
             </div>
