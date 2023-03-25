@@ -1,4 +1,4 @@
-<?php get_header('top'); ?>
+<?php get_header("search"); ?>
 <?php
     $archive_url = esc_url(home_url('/archive/'));
     $now_url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://'). $_SERVER['HTTP_HOST']. $_SERVER['REQUEST_URI'];
@@ -94,3 +94,7 @@
         // 一覧情報取得に利用したループをリセットする
         wp_reset_postdata();
     ?>
+    </main>
+</div>
+
+<?php get_footer(); ?>
