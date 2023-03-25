@@ -29,17 +29,18 @@
         </div>
         <div class="flex-box mt-10">
             <div class="right_aline_button">
-                <a href="" class="btn btn--red btn--radius btn--cubic">続き<i class="fas fa-angle-right fa-position-right" ></i></a>
+                <a href="<?php echo './archive/'; ?>" class="btn btn--red btn--radius btn--cubic">続き<i class="fas fa-angle-right fa-position-right" ></i></a>
             </div>
         </div>
     </section>
     <section class="menuDetailSec">
         <h3>Categories</h3>
         <?php
-        $categories = get_categories();
-        foreach ($categories as $category):
-        ?>
+        $categories = get_categories();?>
         <ul class="menuList">
+        <?php
+            foreach ($categories as $category):
+        ?>
             <li>
                 <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>">
                 <?php
@@ -66,9 +67,8 @@
                 </a>
             </li>
             <?php wp_reset_postdata(); ?>
-
+            <?php endforeach; ?>
         </ul>
-        <?php endforeach; ?>
     </section>
 <?php get_footer(); ?>
 <?php /* https://9-bb.com/wordpress-get-categories/ */

@@ -18,6 +18,18 @@ add_action('init', 'register_my_menu'); // ヘッダーメニューをダッシ�
 
 remove_action('wp_head', 'wp_generator');// Wordpressバージョンをソースから消す
 
+//全記事へのアーカイブ
+function post_has_archive( $args, $post_type ) {
+  if ( 'post' == $post_type ) {
+      $args['rewrite'] = true;
+      $args['has_archive'] = 'archive'; // 任意のスラッグ名
+  }
+  return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+
+
 
 function javascript() {
     wp_enqueue_script( 'jquery-js', 'https://code.jquery.com/jquery-3.5.1.min.js', [],'', true );

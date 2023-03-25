@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
         <script async src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <?php wp_head(); ?>
+        
     </head>
     <body <?php body_class(); ?>>
         <header>
