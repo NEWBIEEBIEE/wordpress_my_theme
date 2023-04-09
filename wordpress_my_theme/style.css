@@ -419,7 +419,9 @@ footer a {
 }
 
 @media (max-width: 600px){
-    
+    .img-post-text > p {
+        display: none;
+    }
     .post-home{
         display: flex;
     }
