@@ -504,10 +504,14 @@ footer a {
 
     .single-img-post{
         height: 200px;
+
+        position: relative;
     }
 
     .img-post-text{
-        top: 100%;
+        /*top: 100%;*/
+        position: absolute;
+        bottom: 0px;
         color: #333;
     }
 

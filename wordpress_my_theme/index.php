@@ -71,4 +71,3 @@
         </ul>
     </section>
 <?php get_footer(); ?>
-<?php /* https://9-bb.com/wordpress-get-categories/ */

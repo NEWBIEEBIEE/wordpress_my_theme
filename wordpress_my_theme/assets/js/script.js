@@ -23,6 +23,9 @@ $(document).ready(function(){
             console.log("menu_length:" + menu_length);
             $(".pc-nav").css("display", "none");
             $(".sp-nav").css("display", "block");
+
+            
+
             if(menu_length < min_sc_width){
             }
 
