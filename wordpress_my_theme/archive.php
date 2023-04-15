@@ -67,8 +67,7 @@
                 <p>【タグ】<?php the_tags('', '、'); ?></p>
             </div>
         </article>
-        <?php endwhile;
-        wp_reset_postdata(); ?>
+        <?php endwhile;?>
         
         <?php the_posts_pagination(
             array(
@@ -85,6 +84,7 @@
                 'type'          => 'list', // 戻り値の指定 (plain/list)
             )
         ); 
+        wp_reset_postdata(); ?>
          ?>
     <?php else: ?>
     <p>記事はありません。</p>
