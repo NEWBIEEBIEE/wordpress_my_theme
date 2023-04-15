@@ -85,7 +85,6 @@
             )
         ); 
         wp_reset_postdata(); ?>
-         ?>
     <?php else: ?>
     <p>記事はありません。</p>
     <?php endif; ?>
