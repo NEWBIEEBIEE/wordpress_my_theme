@@ -34,7 +34,7 @@
             'post_type' => array('post'),
             'post_status' => array('publish'),
             'paged' => $paged,
-            'posts_per_page' => 7
+            'posts_per_page' => 10
         );
 
         //配列で指定した内容で、記事情報を取得
@@ -84,6 +84,7 @@
                 'type'          => 'list', // 戻り値の指定 (plain/list)
             )
         ); 
+        
         wp_reset_postdata(); ?>
     <?php else: ?>
     <p>記事はありません。</p>

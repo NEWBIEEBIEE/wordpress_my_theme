@@ -76,14 +76,23 @@ Author URI: http://naraku.website
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
+    margin:auto;
+    width: 100%;
+    padding: 0px;
+    
+}
+.sp-nav ul li{
+    margin: 0px;
+    width: 100%;
+    border:dotted 5px #d1521c;
     text-align: center;
 }
-
 .sp-nav ul li a {
     display: inline-block;
     text-decoration: none;
-    color: #000;
+    color: #835227;
     padding: 10px;
+
 }
 
 
@@ -385,6 +394,8 @@ footer section {
 footer a {
     color: #fff;
 }
+
+
 
 @media (min-width: 600px){
     #container{
