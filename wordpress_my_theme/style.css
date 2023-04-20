@@ -737,6 +737,14 @@ right: 0px;
     width:100%;
 }
 
+.pc-nav .menu ul {
+    display: flex;
+
+}
+
+.pc-nav .menu ul li {
+    padding:10px;
+}
 
 /* カテゴリーの一覧index.php */
 

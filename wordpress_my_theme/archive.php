@@ -24,6 +24,9 @@
 <div id="container">
     <main>
         <?php
+        //if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
+        //elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
+        //else { $paged = 1; }
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
             // 取得する内容を配列に記載します（不要箇所は省略可）
         $args = array(
@@ -34,7 +37,7 @@
             'post_type' => array('post'),
             'post_status' => array('publish'),
             'paged' => $paged,
-            'posts_per_page' => 10
+            'posts_per_page' => 4
         );
 
         //配列で指定した内容で、記事情報を取得
@@ -76,7 +79,7 @@
                 'type' => 'list',
                 'format' => '?paged=%#%',
                 'current' => max(1, get_query_var('paged')),
-                'total' => $the_query->max_num_pages,
+                'total' => $wp_query->max_num_pages,
                 'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
                 'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
                 'prev_text'     => __( '<<'), // 「前へ」リンクのテキスト
@@ -84,7 +87,7 @@
                 'type'          => 'list', // 戻り値の指定 (plain/list)
             )
         ); 
-        
+
         wp_reset_postdata(); ?>
     <?php else: ?>
     <p>記事はありません。</p>

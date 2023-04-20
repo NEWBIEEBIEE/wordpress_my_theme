@@ -70,4 +70,5 @@
             <?php endforeach; ?>
         </ul>
     </section>
+
 <?php get_footer(); ?>
