@@ -71,7 +71,7 @@
 
                                 @media screen and (max-width: 680px){
                                     .single-img-post{
-                                        background:url(<?php get_theme_file_uri('/assets/images/' . basename($result[$rand]));  ?>) no-repeat;
+                                        background:url(<?php echo get_theme_file_uri('/assets/images/' . basename($result[$rand]));  ?>) no-repeat;
                                         background-size: ;
                                         background-position: center;
                                     }
