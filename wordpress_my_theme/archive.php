@@ -37,7 +37,7 @@
             'post_type' => array('post'),
             'post_status' => array('publish'),
             'paged' => $paged,
-            'posts_per_page' => 4
+            'posts_per_page' => 10
         );
 
         //配列で指定した内容で、記事情報を取得

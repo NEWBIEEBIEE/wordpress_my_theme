@@ -70,5 +70,8 @@
             <?php endforeach; ?>
         </ul>
     </section>
-
+    <section class="forum">
+        <h3>Forums</h3>
+        <?php echo do_shortcode('[bbp-forum-index]'); ?>
+    </section>
 <?php get_footer(); ?>

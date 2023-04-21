@@ -82,21 +82,26 @@
                             }
                         }
                     </style>
-                    <?php else: ?>
-                    <style>
-                        .single-img-post{
-                            background: url(https://placehold.jp/600x400.png) no-repeat;
-                            background-size: cover;
-                            background-position: center;
-                        }
-                        @media screen and (max-width: 680px) {
-                            .single-img-post{
-                                background:url(https://placehold.jp/600x400.png) no-repeat;
-                                background-size: ;
-                                background-position: center;
-                            }
-                        }
-                        </style>
+                    <?php else:
+                            $result = glob(get_template_directory() . '/assets/images/*');
+                            $uri = get_template_directory_uri() . 'assets/images/';
+                            $rand = rand(0, (count($result) - 1));
+                            ?>
+                        <style>
+                                .single-img-post {
+                                    background:url(<?php echo get_theme_file_uri('/assets/images/' . $result[$rand] );  ?>) no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                }
+
+                                @media screen and (max-width: 680px){
+                                    .single-img-post{
+                                        background:url(<?php echo get_theme_file_uri('/assets/images/' . $result[$rand] );  ?>) no-repeat;
+                                        background-size: ;
+                                        background-position: center;
+                                    }
+                                }
+                            </style>
                         <?php endif; ?>
                     </section>
                     <?php

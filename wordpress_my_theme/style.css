@@ -10,7 +10,90 @@ Author URI: http://naraku.website
 
 /* 追加のcss ここから　*/
 
+/* ##配色
+ * 
+ * - white: white
+ * - gray: whitesmoke
+ * - black: slategray
+ * - sub: #FCECEA
+ * - main: #EE817B
+ * 
+ * 上のカラーコードで検索かけて一括変換すればお好みの色に変えられます。cssの辛いとこね、これ
+ *
+*/
 
+/*bbPressフォーラム一覧画面*/
+
+#bbpress-forums ul.bbp-forums {
+    border: none;
+  }
+  
+  #bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer, #bbpress-forums li.bbp-body li.bbp-forum-reply-count, #bbpress-forums li.bbp-body li.bbp-forum-freshness {
+    display: none;
+  }
+  
+  #bbpress-forums li.bbp-body ul.forum {
+    border-top: none;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  #bbpress-forums li.bbp-forum-info {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+  }
+  
+  #bbpress-forums .bbp-forum-info .bbp-forum-content {
+    position: relative;
+    display: inline-block;
+    padding: .5em 1em .5em 5px;
+    min-width: 200px;
+    max-width: 100%;
+    border-radius: 3px;
+    color: slategray;
+    background: whitesmoke;
+  }
+  
+  #bbpress-forums .bbp-forum-info .bbp-forum-content::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    margin-left: -15px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid whitesmoke;
+  }
+  
+  #bbpress-forums .bbp-forum-info a.bbp-forum-title {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #EE817B;
+    /*カテゴリー名の文字色*/
+    text-decoration: none;
+    padding: 15px 15px 15px 0;
+  }
+  
+  #bbpress-forums li.bbp-body li.bbp-forum-topic-count {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 15px;
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    background: whitesmoke;
+    color: slategray;
+  }
+  
+  
 
 /* ハンバーガーメニュ ここから */
 
