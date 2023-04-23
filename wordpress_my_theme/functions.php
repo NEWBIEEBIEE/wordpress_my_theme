@@ -89,3 +89,20 @@ function login_redirect( $user_login, $user ) {
   }
   }
   add_action( 'wp_login', 'login_redirect', 10, 2 );
+
+add_action( 'auth_redirect', 'subscriber_go_to_home' );
+function subscriber_go_to_home( $user_id ) {
+$user = get_userdata( $user_id );
+if ( !$user->has_cap( 'edit_posts' ) ) {
+wp_redirect( get_home_url() );
+exit();
+}
+}
+
+add_action( 'after_setup_theme', 'subscriber_hide_admin_bar' );
+function subscriber_hide_admin_bar() {
+$user = wp_get_current_user();
+if ( isset( $user->data ) && !$user->has_cap( 'edit_posts' ) ) {
+show_admin_bar( false );
+}
+}
